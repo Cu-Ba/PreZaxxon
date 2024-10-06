@@ -18,6 +18,7 @@ public class DestroyObstacle : MonoBehaviour
         if (transform.position.z < destroyPosition)
         {
             Destroy(gameObject);
+            GameStop();
         }
     }
 
@@ -32,7 +33,7 @@ public class DestroyObstacle : MonoBehaviour
             //Aqui destruyo la bala
             Destroy(other.gameObject);
 
-            //Aqui reproduzco la animación de explosion --!!!!!PENDIENTE DE ANIMAR!!!!!--
+            //Aqui reproduzco la animaciï¿½n de explosion --!!!!!PENDIENTE DE ANIMAR!!!!!--
         }
 
     }

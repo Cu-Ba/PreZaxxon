@@ -9,16 +9,19 @@ public class CanonShooting : MonoBehaviour
     public List<Transform> gunPoints;
 
     //Velocidad de la bala
-    public float bulletSpeed = 10f;
+    public float bulletSpeed = 10f;     //Ni de coña a 20 muy muy lento 40->
 
     //Distancia maxima de la bala
-    public float maxDistance = 3f;
+    public float maxDistance = 3f;      //A 40f para que tenga sentido
 
     //Tiempo hasta el proximo disparo
     float nextFireTime = 0f;
 
     //Tiempor ENTRE disparos
     float fireRate = 0.5f;
+
+    //Bool para togglear disparo
+    public bool powerUp = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,26 +38,26 @@ public class CanonShooting : MonoBehaviour
 
     void Shoot()
     {
-        foreach (Transform gunPoint in gunPoints)
-        {
-            //Aqui creo e instancio la bala
-            GameObject bullet = Instantiate(bulletPrefab, gunPoint.position, gunPoint.rotation);
+            foreach (Transform gunPoint in gunPoints)
+            {
+                //Aqui creo e instancio la bala
+                GameObject bullet = Instantiate(bulletPrefab, gunPoint.position, gunPoint.rotation);
 
-            //Aqui le doy direccion y velocidad a la bala
-            bullet.GetComponent<Rigidbody>().velocity = Vector3.forward * bulletSpeed;
+                //Aqui le doy direccion y velocidad a la bala
+                bullet.GetComponent<Rigidbody>().velocity = Vector3.forward * bulletSpeed;
 
-            //Aqui destruyo la bala tras recorrer una distancia
-            Destroy(bullet, maxDistance / bulletSpeed);
-        }
+                //Aqui destruyo la bala tras recorrer una distancia
+                Destroy(bullet, maxDistance / bulletSpeed);
+            }
     }
 
     void Shooting()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFireTime)
-        {
-            Shoot();
-            nextFireTime = Time.time + fireRate;
-        }
+            if (Input.GetButton("Fire1") && Time.time > nextFireTime)
+            {
+                Shoot();
+                nextFireTime = Time.time + fireRate;
+            }
     }
 
 }

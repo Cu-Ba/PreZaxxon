@@ -21,7 +21,14 @@ public class PlayerManager : MonoBehaviour
     //Angulo de maxima rotacion
     float maxRotationAngle = 5f;
 
-
+    //Trigger se llama cuando coliciona con otro
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Capitan, hemos impactado!!");
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

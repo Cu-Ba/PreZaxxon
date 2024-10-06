@@ -29,7 +29,7 @@ public class EnemyInstance : MonoBehaviour
         while (true)
         {
             Instantiate(obstacle, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(0.4f);
         }
 
         //Destroy(GameObject obstacle, WaitForSeconds(4f);
