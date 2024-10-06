@@ -18,7 +18,7 @@ public class DestroyObstacle : MonoBehaviour
         if (transform.position.z < destroyPosition)
         {
             Destroy(gameObject);
-            GameStop();
+            
         }
     }
 
