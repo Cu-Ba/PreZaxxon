@@ -1,27 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class InstanciarCalle : MonoBehaviour
-{
-    [SerializeField] GameObject calle;
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine("MoverSuelo");
-    }
+//public class InstanciarCalle : MonoBehaviour
+//{
 
-    // Update is called once per frame
-    void Update()
-    {
+//    PlayerManager playerManager;
 
-    }
-    IEnumerator MoverSuelo()
-    {
-        while (true)
-        {
-            Instantiate(calle, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(20f);
-        }
-    }
-}
+//    [SerializeField] GameObject escenarioPrefab;
+
+//    //float speed = 20f;
+//    // Start is called before the first frame update
+//    void Start()
+//    {
+//        playerManager = GameObject.Find("NavePrefab").GetComponent<PlayerManager>();
+
+//    }
+
+//    // Update is called once per frame
+//    void Update()
+//    {
+//        speed = playerManager.speed;
+//        transform.Translate(Vector3.back * Time.deltaTime * speed);
+//        if (transform.position.z <= -200f)
+//        {
+
+//            Instantiate(escenarioPrefab, new Vector3(0f, 0f, 400f), Quaternion.identity);
+//            Destroy(gameObject);
+//        }
+//    }
+//}
