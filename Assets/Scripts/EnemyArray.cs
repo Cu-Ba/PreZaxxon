@@ -23,6 +23,8 @@ public class EnemyArray : MonoBehaviour
         {
             yield return new WaitForSeconds(spawmTime);
 
+            Debug.Log("Spawming enemy...");
+
             //Aqui es donde viene la magia, escojo un enemigo aleatorio y un punto de spawm aleatorio
             int randomEnemyIndex = Random.Range(0, spikes.Length);
             int randomSpawmPointIndex = Random.Range(0, spawmPoints.Length);
