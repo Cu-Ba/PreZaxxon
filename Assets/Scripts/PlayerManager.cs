@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-
+    //Accedo al script de la camara para poder aplicar un drift
+    public MoveCamera cameraFollow;
+    //Accedo al obstaculo para poder destruirlo
     //Ejes de movimiento
     float moveX;
     float moveY;
@@ -27,6 +29,8 @@ public class PlayerManager : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Capitan, hemos impactado!!");
+            cameraFollow.ActivateDrift();
+            Destroy(other.gameObject);
         }
     }
 

@@ -122,6 +122,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &148027263
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318253329037916170, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_Name
+      value: Pelota_pinchos
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
 --- !u!1 &155967729
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +603,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -627,6 +685,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 11.448, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375cdb16329ce3646805532b3cac2e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1221488457}
+  offset: {x: 0, y: 5, z: -10}
+  smoothspeed: 0.125
+  driftIntensity: 0.1
 --- !u!1 &1120227011
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0022a2f38eec74c91d4642e881c7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraFollow: {fileID: 963194229}
   moveSpeed: 40
   rotationSpeed: 0
   speed: 50
@@ -808,8 +883,8 @@ MonoBehaviour:
   - {fileID: 1140952128}
   - {fileID: 350511626}
   - {fileID: 682251431}
-  bulletSpeed: 40
-  maxDistance: 40
+  bulletSpeed: 100
+  maxDistance: 100
   powerUp: 0
 --- !u!114 &1221488459
 MonoBehaviour:
@@ -892,6 +967,67 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.97, y: 3.14, z: 5.73}
   m_Center: {x: 0, y: 0.52, z: 0}
+--- !u!1001 &1321444954
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 609.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318253329037916170, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_Name
+      value: Pelota_pinchos_V
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124167837459945865, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d8cd51b6f9b76c84fae2c57c71c4efec, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
 --- !u!1001 &1660251455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1055,7 +1191,7 @@ Transform:
   m_GameObject: {fileID: 1969625959}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.69, y: 6.3, z: 71.29}
+  m_LocalPosition: {x: 1.69, y: 6.3, z: 222.2}
   m_LocalScale: {x: 2.2198, y: 2.2198, z: 2.2198}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1088,7 +1224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.47
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1044419043103396714, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1143,3 +1279,5 @@ SceneRoots:
   - {fileID: 630825685}
   - {fileID: 8659841971165237084}
   - {fileID: 1806988979}
+  - {fileID: 1321444954}
+  - {fileID: 148027263}
