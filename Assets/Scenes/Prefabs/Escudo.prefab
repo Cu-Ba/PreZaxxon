@@ -93,6 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 174150254332659255}
   - component: {fileID: 4579191558321075767}
+  - component: {fileID: -5127189037168457359}
+  - component: {fileID: -7419045592520447510}
   m_Layer: 0
   m_Name: Escudo
   m_TagString: Untagged
@@ -137,3 +139,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.66, y: 2.3, z: 0.28}
   m_Center: {x: 0, y: 1.18, z: 0.12}
+--- !u!114 &-5127189037168457359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4886559282707694254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c9793e8c73935409d1e1bef3f5dfb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nave: {fileID: -8679921383154817045, guid: eba310d3cc743a34ab06c40fd5b0d31c, type: 3}
+--- !u!114 &-7419045592520447510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4886559282707694254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39994b9b552c47043b1414aca00edfd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invecibilityDuration: 5

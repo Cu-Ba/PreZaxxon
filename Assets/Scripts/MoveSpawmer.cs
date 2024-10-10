@@ -16,7 +16,7 @@ public class MoveSpawmer : MonoBehaviour
     //Declaro la posición de Y por defecto (para el PowerUp)
     float defaultY = 6.3f;
     //Declaro la velocidad de desplazamiento
-    float speed = 150f;
+    float speed = 200f;
     //Aqui declaro el numero aleatorio
     float randomX;
     float randomY;

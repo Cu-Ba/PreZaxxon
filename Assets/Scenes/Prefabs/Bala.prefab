@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2227252963225393794}
   - component: {fileID: -5545325934547204698}
   - component: {fileID: 5727646353259135188}
+  - component: {fileID: 8937157319295450708}
   m_Layer: 0
   m_Name: Bala
   m_TagString: Untagged
@@ -70,6 +71,19 @@ CapsuleCollider:
   m_Height: 5.16
   m_Direction: 1
   m_Center: {x: 0.01, y: 2.45, z: 0}
+--- !u!114 &8937157319295450708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268848573991684611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c9793e8c73935409d1e1bef3f5dfb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nave: {fileID: -8679921383154817045, guid: eba310d3cc743a34ab06c40fd5b0d31c, type: 3}
 --- !u!1 &5652213351331094727
 GameObject:
   m_ObjectHideFlags: 0

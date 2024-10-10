@@ -367,6 +367,7 @@
 "Assets/Scripts/InvicibilityPowerUp.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/MovementRestriction.cs"
+"Assets/Scripts/MovePowerUp.cs"
 "Assets/Scripts/MoveSpawmer.cs"
 "Assets/Scripts/PlayerManager.cs"
 -langversion:9.0
