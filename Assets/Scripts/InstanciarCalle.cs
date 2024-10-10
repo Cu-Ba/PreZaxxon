@@ -9,9 +9,11 @@ public class InstanciarCalle : MonoBehaviour
     public Transform player;
 
     //Longitud de la seccion del terreno
-    float calleLenght = 5f;
+    float calleLenght = 700f;
 
-    Vector3 nextSpawmPosition;
+    private Vector3 nextSpawmPosition;
+
+    bool canSpawn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,22 +29,31 @@ public class InstanciarCalle : MonoBehaviour
 
     void ComprobarPosicionJugador()
     {
-        Debug.Log("Player Z position: " + player.position.z);
-        Debug.Log("Next Spawm Position: " + nextSpawmPosition.z);
 
-        if (player.position.z >= nextSpawmPosition.z - calleLenght)
+        if (canSpawn && transform.position.z <= player.position.z) 
         {
+            canSpawn = false;
+
             SpawmNextSection();
-            
+
+            StartCoroutine(DestroyCalle());
         }
     }
 
     void SpawmNextSection()
     {
-        Debug.Log("Nuevo escenario...");
         
         Instantiate(callePrefab, nextSpawmPosition, Quaternion.identity);
 
         nextSpawmPosition += new Vector3(0, 0, calleLenght);
+
+        canSpawn = true;
+    }
+
+    IEnumerator DestroyCalle()
+    {
+        yield return new WaitForSeconds(5f);
+
+        Destroy(gameObject);
     }
 }

@@ -31,11 +31,11 @@ public class MovementRestriction : MonoBehaviour
         Vector3 position = transform.position;
 
         //Aqui limito en X
-        position.x = Mathf.Clamp(position.x, -35f, 30f);
+        position.x = Mathf.Clamp(position.x, -40f, 47f);
         //Aqui limito en Y
-        position.y = Mathf.Clamp(position.y, 2f, 11f);
+        position.y = Mathf.Clamp(position.y, 2f, 40f);
         //Aqui limito en Z
-        position.z = Mathf.Clamp(position.z, 1.5f, 8f);
+        position.z = Mathf.Clamp(position.z, 1.5f, 15f);
 
 
         //Aqui aplico la posicion a la nave

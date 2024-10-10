@@ -6,17 +6,17 @@ public class MoveSpawmer : MonoBehaviour
 {
 
     //Declaro los margenes horizontales
-    float minX = -35f;
-    float maxX = 30f;
+    float minX = -42f;
+    float maxX = 49f;
 
     //Declaro los margenes verticales
     float minY = 2f;
-    float maxY = 11f;
+    float maxY = 40f;
 
     //Declaro la posición de Y por defecto (para el PowerUp)
     float defaultY = 6.3f;
     //Declaro la velocidad de desplazamiento
-    float speed = 60f;
+    float speed = 150f;
     //Aqui declaro el numero aleatorio
     float randomX;
     float randomY;
