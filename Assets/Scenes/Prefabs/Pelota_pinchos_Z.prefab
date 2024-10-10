@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pelota_pinchos_Z
       objectReference: {fileID: 0}
+    - target: {fileID: 1318253329037916170, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      propertyPath: m_TagString
+      value: Spike
+      objectReference: {fileID: 0}
     - target: {fileID: 7124167837459945865, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -63,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1318253329037916170, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 801997705956212863}
+    - targetCorrespondingSourceObject: {fileID: 1318253329037916170, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2268339263224948870}
   m_SourcePrefab: {fileID: 100100000, guid: abdb1732319c1234581eae6dd12f338b, type: 3}
 --- !u!1 &3678238077320369301 stripped
 GameObject:
@@ -84,3 +91,24 @@ MonoBehaviour:
   speedZ: 50
   oscillationSpeed: 3
   oscillationWidth: 8
+--- !u!135 &2268339263224948870
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678238077320369301}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3.22
+  m_Center: {x: 0, y: 0, z: 0}

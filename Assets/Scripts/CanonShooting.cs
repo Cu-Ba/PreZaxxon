@@ -33,7 +33,10 @@ public class CanonShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Shooting();
+        if (powerUp)
+        {
+            Shooting();
+        }
     }
 
     void Shoot()
@@ -60,4 +63,15 @@ public class CanonShooting : MonoBehaviour
             }
     }
 
+    public void ActivateAutoFire(float duration)
+    {
+        StartCoroutine(AutoFireCoroutine(duration));
+    }
+
+    IEnumerator AutoFireCoroutine(float duration)
+    {
+        powerUp = true;
+        yield return new WaitForSeconds(duration);
+        powerUp = false;
+    }
 }
