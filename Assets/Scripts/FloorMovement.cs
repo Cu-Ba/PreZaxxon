@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class FloorMovement : MonoBehaviour
-{
+{   
+    PlayerManager playerManager;
     float speed = 30f;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,7 @@ public class FloorMovement : MonoBehaviour
 
     void Movement()
     {
-
+        playerManager = GetComponent<PlayerManager>();
         transform.Translate(Vector3.back * Time.deltaTime * speed);
     }
 }

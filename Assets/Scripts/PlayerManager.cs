@@ -25,7 +25,7 @@ public class PlayerManager : MonoBehaviour
     public float speed = 50f;
 
     //Angulo de maxima rotacion
-    float maxRotationAngle = 5f;
+    float maxRotationAngle = 10f;
 
     //Power Up
     public bool isInvencible = false;
