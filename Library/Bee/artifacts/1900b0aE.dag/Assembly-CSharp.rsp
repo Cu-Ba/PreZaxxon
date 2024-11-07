@@ -369,6 +369,7 @@
 "Assets/Scripts/FloorMovement.cs"
 "Assets/Scripts/InstanciarCalle.cs"
 "Assets/Scripts/InvicibilityPowerUp.cs"
+"Assets/Scripts/Menu.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/MovementRestriction.cs"
 "Assets/Scripts/MovePowerUp.cs"
