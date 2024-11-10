@@ -15,7 +15,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("SCORE: " + score);
+        
         OnTwentySeconds();
     }
 
@@ -26,5 +26,6 @@ public class Score : MonoBehaviour
         if (division == 0){
             score += 10; 
         }
+        Debug.Log("Time passed " + timePassed + " and the scroe is: " + score);
     }
 }

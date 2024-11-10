@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580600155}
+      - m_Target: {fileID: 580600161}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: OnQuitButton
         m_Mode: 1
@@ -267,8 +267,7 @@ GameObject:
   - component: {fileID: 580600159}
   - component: {fileID: 580600158}
   - component: {fileID: 580600157}
-  - component: {fileID: 580600156}
-  - component: {fileID: 580600155}
+  - component: {fileID: 580600161}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -276,30 +275,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &580600155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580600154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761c1d4942d695a48947d010b5b138e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &580600156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580600154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1268673f68378f14992cafb65af7d134, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &580600157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +361,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &580600161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580600154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d78153ef1c9f74a95a2764ab902801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &637820432
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +710,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580600155}
+      - m_Target: {fileID: 580600161}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: OnPlayButton
         m_Mode: 1
@@ -830,7 +817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Ajustes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1345,7 +1332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -103}
+  m_AnchoredPosition: {x: 0, y: -58}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990560897
@@ -1392,9 +1379,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580600155}
+      - m_Target: {fileID: 580600161}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnQuitButton
+        m_MethodName: OnSettingsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

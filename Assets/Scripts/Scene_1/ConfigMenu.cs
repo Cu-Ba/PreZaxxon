@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ConfigMenu : MonoBehaviour
 {
-    public void OnPlayButton()
+    public void OnBackButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 }

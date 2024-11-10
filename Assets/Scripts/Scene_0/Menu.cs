@@ -19,6 +19,11 @@ public class Menu : MonoBehaviour
 
     public void OnPlayButton()
     {
+        SceneManager.LoadScene(2);
+    }
+
+    public void OnSettingsButton()
+    {
         SceneManager.LoadScene(1);
     }
 
