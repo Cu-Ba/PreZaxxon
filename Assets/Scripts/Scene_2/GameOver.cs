@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
 
     public void LaunchGameOver()
     {
-        Time.timeScale = 0.2f;
+        Time.timeScale = 0f;
         quitGame = !quitGame;
         gameOverPanel.SetActive(quitGame);
     }
@@ -28,6 +28,7 @@ public class GameOver : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(2);
+        PlayerPrefs.DeleteKey("PlayerScore");
     }
 
     public void Quit()

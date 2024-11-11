@@ -55,7 +55,6 @@ public class PlayerManager : MonoBehaviour
     {
         gameOver = GameOverScript.GetComponent<GameOver>();
         
-        
     }
 
     // Update is called once per frame
@@ -88,9 +87,9 @@ public class PlayerManager : MonoBehaviour
         transform.rotation = Quaternion.Euler(maxRotationAngle * -moveX, -90f, maxRotationAngle * -moveY);
     }
 
-    void TakeDamage(Collider other)
+    public void TakeDamage(Collider other)
     {
-        if (alive)
+        if (alive && health > 0)
         {
             if (other.gameObject.CompareTag("Obstacle"))
             {
@@ -98,7 +97,8 @@ public class PlayerManager : MonoBehaviour
                 cameraFollow.ActivateDrift();
                 health -= 1;
                 Debug.Log("Salud actual: " + health);
-                uIManager.UpdateLive(health);
+                //uIManager.UpdateLive(health);
+                
             }
 
             else if (other.gameObject.CompareTag("Spike"))
@@ -107,6 +107,7 @@ public class PlayerManager : MonoBehaviour
                 cameraFollow.ActivateDrift();
                 health -= 2;
                 Debug.Log("Salud actual: " + health);
+                //uIManager.UpdateLive(health);
 
             }
 
@@ -114,19 +115,13 @@ public class PlayerManager : MonoBehaviour
             {
                 alive = false;
                 Die();
+                
             }
         }
-    }
 
-    void IsAlive()
-    {
-        if (health > 0)
-        {
-            alive = true;
-        }
-        else if (health < 0)
-        {
+        else if (!alive || health <= 0) {
             alive = false;
+            Die();
         }
     }
 
