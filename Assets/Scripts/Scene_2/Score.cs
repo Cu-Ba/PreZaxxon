@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public int score;
+    //public static float score;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +16,11 @@ public class Score : MonoBehaviour
     void Update()
     {
         
-        OnTwentySeconds();
+        //OnTwentySeconds();
+        PointsPerSeconds();
     }
 
-    void OnTwentySeconds()
+    /*void OnTwentySeconds()
     {
         int timePassed = (int)Math.Round(Time.deltaTime);
         int division = timePassed % 2;
@@ -27,5 +28,14 @@ public class Score : MonoBehaviour
             score += 10; 
         }
         Debug.Log("Time passed " + timePassed + " and the scroe is: " + score);
+    }*/
+
+    void PointsPerSeconds()
+    {
+        float points = 20f;
+        float totalPoints = points * Time.deltaTime;
+        ScoreManager.Instance.Score += (int)Math.Round(totalPoints);
+        Debug.Log("Score: " + ScoreManager.Instance.Score);
+
     }
 }

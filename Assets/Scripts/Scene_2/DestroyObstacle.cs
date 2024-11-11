@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyObstacle : MonoBehaviour
 {
 
+    [SerializeField] GameObject nave;
     public float destroyPosition = 30f;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class DestroyObstacle : MonoBehaviour
             //Aqui destruyo la bala
             Destroy(other.gameObject);
 
+            ScoreManager.Instance.Score += 10;
             //Aqui reproduzco la animaci�n de explosion --!!!!!PENDIENTE DE ANIMAR!!!!!--
         }
 
