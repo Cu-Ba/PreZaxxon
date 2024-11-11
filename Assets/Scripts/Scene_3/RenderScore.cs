@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
-public class ScoreDisplay : MonoBehaviour
+public class RenderScore : MonoBehaviour
 {
-
     float score;
     public Text ScoreText; 
     float transitionSpeed = 100f;
 
     float displayScore;
 
-    void Start(){
+    void Start()
+    {
         score = ScoreManager.Instance.Score;
     }
 
@@ -24,16 +25,23 @@ public class ScoreDisplay : MonoBehaviour
         UpdateScoreDisplay();
         Debug.Log(score);
     }
-    public void IncreaseScore(float amount)
-    {
-        score += amount;
-        UpdateScoreDisplay();
-
-    }
 
     public void UpdateScoreDisplay()
     {
-        ScoreText.text = string.Format("Score: {0:00000}", displayScore);
+        score = PlayerPrefs.GetFloat("PlayerScore");
+        ScoreText.text = "Score: " + score;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+        else {
+        Invoke("GoToMain", 5);
+        }
+    }
+
+
+    void GoToMain()
+    {
+        SceneManager.LoadScene(0);
     }
 }
-

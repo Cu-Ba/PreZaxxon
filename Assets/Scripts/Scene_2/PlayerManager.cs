@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+
+    [SerializeField] GameObject GameOverScript;
+    [SerializeField] GameObject LifeManager;
+    GameOver gameOver;
+    UIManager uIManager;
+
     //Accedo al script de la camara para poder aplicar un drift
     public MoveCamera cameraFollow;
 
-    //Aqui creo un float para la salud del jugador (Aun sin uso)
-    public float health = 10f;
+    //Aqui creo un float para la salud del jugador
+    public int health = 5;
     bool alive = true;
 
     //Ejes de movimiento
@@ -47,6 +53,8 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameOver = GameOverScript.GetComponent<GameOver>();
+        
         
     }
 
@@ -88,20 +96,21 @@ public class PlayerManager : MonoBehaviour
             {
                 Debug.Log("Capitan, impacto de asteroide!!");
                 cameraFollow.ActivateDrift();
-                health -= 1f;
+                health -= 1;
                 Debug.Log("Salud actual: " + health);
+                uIManager.UpdateLive(health);
             }
 
             else if (other.gameObject.CompareTag("Spike"))
             {
                 Debug.Log("Impacto de Spike!!");
                 cameraFollow.ActivateDrift();
-                health -= 2f;
+                health -= 2;
                 Debug.Log("Salud actual: " + health);
 
             }
 
-            if (health <= 0f)
+            if (health <= 0)
             {
                 alive = false;
                 Die();
@@ -111,11 +120,11 @@ public class PlayerManager : MonoBehaviour
 
     void IsAlive()
     {
-        if (health > 0f)
+        if (health > 0)
         {
             alive = true;
         }
-        else if (health < 0f)
+        else if (health < 0)
         {
             alive = false;
         }
@@ -123,7 +132,9 @@ public class PlayerManager : MonoBehaviour
 
     void Die()
     {
-            Debug.Log("MUERTE");
+        PlayerPrefs.SetFloat("highScore", ScoreManager.Instance.Score);
+        gameOver.LaunchGameOver();
+        Debug.Log("MUERTE");
     }
 
     void DestroyObstacle(Collider other)

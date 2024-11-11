@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    //public static float score;
+    float score;
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = PlayerPrefs.GetFloat("PlayerScore", 0);
     }
 
     // Update is called once per frame
@@ -35,7 +35,8 @@ public class Score : MonoBehaviour
         float points = 20f;
         float totalPoints = points * Time.deltaTime;
         ScoreManager.Instance.Score += (int)Math.Round(totalPoints);
-        Debug.Log("Score: " + ScoreManager.Instance.Score);
+        PlayerPrefs.SetFloat("PlayerScore", ScoreManager.Instance.Score);
+        //Debug.Log("Score: " + ScoreManager.Instance.Score);
 
     }
 }
